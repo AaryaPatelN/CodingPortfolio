@@ -18,8 +18,8 @@ transactions = [
 ]
 
 # Define rules and transactions
-amount_threshold = 1000.00
-location_threshold = 2
+amount_threshold = 1200.00
+location_threshold = 1
 
 suspicious_transactions = []
 
