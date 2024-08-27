@@ -6,7 +6,15 @@ transactions = [
     {"amount": 1000.00, "location": "London", "time": "2023-06-20T15:45:00"},
     {"amount": 378.66, "location": "Vancouver", "time": "2023-07-20T15:32:00"},
     {"amount": 245.00, "location": "Miami", "time": "2023-08-20T15:23:00"},
-    {"amount": 175.00, "location": "Charlotte", "time": "2023-08-20T15:16:00"}
+    {"amount": 175.00, "location": "Charlotte", "time": "2023-08-20T15:16:00"},
+    {"amount": 50.00, "location": "San Francisco", "time": "2023-06-21T09:00:00"},
+    {"amount": 1500.00, "location": "London", "time": "2023-07-15T10:00:00"},
+    {"amount": 800.00, "location": "Toronto", "time": "2023-07-21T11:00:00"},
+    {"amount": 1200.00, "location": "Sydney", "time": "2023-08-10T14:00:00"},
+    {"amount": 300.00, "location": "Vancouver", "time": "2023-08-15T16:00:00"},
+    {"amount": 500.00, "location": "New York", "time": "2023-08-20T09:30:00"}, 
+    {"amount": 250.00, "location": "Chicago", "time": "2023-08-21T10:00:00"},
+    {"amount": 100.00, "location": "San Francisco", "time": "2023-08-21T10:15:00"},
 ]
 
 # Define rules and transactions
