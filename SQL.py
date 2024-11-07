@@ -28,9 +28,11 @@ try:
         ("Mindy", "programmer", "password_around", 21, "f")
     ]
 
-    # Insert data using raw SQL to simulate potential vulnerability
-    for person in people_data:
-        cursor.execute(f"INSERT INTO people (name, job, password, age, gender) VALUES ('{person[0]}', '{person[1]}', '{person[2]}', {person[3]}, '{person[4]}')")
+    # Insert data using parameterized queries
+    cursor.executemany('''
+        INSERT INTO people (name, job, password, age, gender) 
+        VALUES (?, ?, ?, ?, ?)
+    ''', people_data)
 
     conn.commit()
 
@@ -38,14 +40,14 @@ try:
     age_input = int(input("Enter your age: "))
 
     # Simulate a potential flaw by using direct SQL concatenation (not parameterized)
-    cursor.execute(f"SELECT * FROM people WHERE age < {age_input}")
+    cursor.execute("SELECT * FROM people WHERE age < ?", (age_input,))
 
     # User login input
     name_input = input("What is your login name: ")
     password_input = input("What is your password: ")
 
-    # Simulate a potential flaw by using direct SQL concatenation (not parameterized)
-    cursor.execute(f"SELECT * FROM people WHERE name = '{name_input}' AND password = '{password_input}'")
+    # Use parameterized query for user login
+    cursor.execute("SELECT * FROM people WHERE name = ? AND password = ?", (name_input, password_input))
 
     rows = cursor.fetchall()
 
