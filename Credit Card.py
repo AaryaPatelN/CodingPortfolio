@@ -7,7 +7,7 @@ transactions = [
     {"amount": 245.00, "location": "Miami", "time": "2023-08-20T15:23:00"},  
     {"amount": 175.00, "location": "Charlotte", "time": "2023-08-20T15:16:00"},  
     {"amount": 50.00, "location": "San Francisco", "time": "2023-06-21T09:00:00"}, 
-    {"amount": 1500.00, "location": "London", "time": "2023-07-15T10:00:00"},  
+    {"amount": 300.00, "location": "London", "time": "2023-07-15T10:00:00"},  
     {"amount": 491.00, "location": "Toronto", "time": "2023-07-21T11:00:00"},
     {"amount": 1200.00, "location": "London", "time": "2023-07-16T14:00:00"},  
     {"amount": 750.00, "location": "Sydney", "time": "2023-08-11T14:00:00"},  
@@ -15,7 +15,7 @@ transactions = [
 ]
 
 # Define rules and transactions
-amount_threshold = 600
+amount_threshold = 500
 location_threshold = 1
 
 suspicious_transactions = []
