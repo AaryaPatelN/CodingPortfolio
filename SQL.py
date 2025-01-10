@@ -40,7 +40,7 @@ try:
     age_input = int(input("Enter your age: "))
 
     # Simulate a potential flaw by using direct SQL concatenation (not parameterized)
-    cursor.execute("SELECT * FROM people WHERE age < ?", (age_input,))
+    cursor.execute("SELECT * FROM people WHERE age = ?", (age_input,))
 
     # User login input
     name_input = input("What is your login name: ")
